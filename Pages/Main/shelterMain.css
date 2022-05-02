@@ -1,0 +1,7 @@
+.startScreen{
+background-image: url(../../Assets/start-screen-gradient-background.png);
+background-repeat: no-repeat;
+background-size: contain;
+width: 1280px;
+height: 908px;
+}
