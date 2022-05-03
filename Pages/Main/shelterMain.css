@@ -1,20 +1,29 @@
-section{
-    margin: 0 auto;
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0 auto !important;
     max-width: 1280px;
-    width: 100%;
+    background-color: #f1cdb3;
+    
+    
 }
 .startScreen{
 background-image: url(../../Assets/start-screen-gradient-background.png);
 background-repeat: no-repeat;
-background-size: contain;
+background-size: cover;
 width: 1280px;
-height: 908px;
-z-index: -1;
+padding: 40px 40px 0px 40px;
+margin: 0 auto;
+max-width: 1280px;
+width: 100%;
+
 }
 header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    
 }
 ul{
     display: flex;
@@ -22,6 +31,8 @@ ul{
     justify-content: space-around;
     width: 50vw;
     list-style: none;
+    align-items: center;
+    align-content: center;
 }
 li a{
   
@@ -29,8 +40,8 @@ li a{
 };
 
 
-.logo h1{
- color:   #F1CDB3 ;
+section #Cozy{
+ Color:#f1cdb3 !important;
   
 }
 .content{
@@ -45,16 +56,193 @@ left: 0px;
 top: 163px;
 }
 .start-dog{
-    position: absolute;
-    width: 698px;
-    height: 728px;
+   
+    width: 50vw;
+    height: 50vw;
     left: calc(50% - 698px/2 + 251px);
     bottom: 0px;
     background: url(../../Assets/start-screen-puppy.png);
+    background-repeat: no-repeat;
+    background-size: cover;
      
 }
 .start-screen{
     height:100%;
     display: flex;
     align-items: center;
+    align-items: space-between;
+    justify-content: space-between;
+    
+}
+.Logo{
+    line-height: 15px;
+}
+.make-friend{
+    width: 50%;
+    height: 50px;
+    background: #F1CDB3;
+    border-radius: 100px;
+    border: 0px;
+}
+
+.About{
+    width: 1280px ;
+    height: 588px;
+    background-color: #FFFFFF;
+}
+.AboutContainer{
+    height: 100%;
+    padding: 80px 40px 100px 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.AboutImage{
+background-image: url(../../Assets/about-pets.png);
+background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+    width: 30%;
+    margin-left: 175px;
+}
+
+.AboutContent{
+    width: 35%;
+    margin-right: 175px;
+}
+
+.pets{
+    height: 877px;
+    background-color: #F6F6F6;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    
+ 
+    align-content: space-around;
+    justify-content: space-around;
+
+}
+.slider{
+    height: 50%;
+    background-color: #F6F6F6;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.left{
+    background-image: url(../../Assets/button_arrow.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 55px;
+    height: 55px;
+}
+.right{
+    background-image: url(../../Assets/button_arrow\ \(1\).png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 55px;
+    height: 55px; 
+}
+
+.cat-card,.jenifer,.woody{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.cat{
+    border-radius: 9px 9px 0px 0px;
+    width: 270px;
+    height: 270px;
+
+}
+.card-button{
+    height: 53px;
+    width: 187px;
+    background-color: white;
+    
+    border-radius: 40px ;
+    border:2px solid #f1cdb3;
+}
+.pets-title, .help-title{
+    text-align: center;
+    font-size: 35px;
+line-height: 130%;
+color: #545454;
+}
+
+.btn-pets{
+    border-radius: 40px ;
+    width: 25%;
+    height: 6%; 
+    background-color: #F1CDB3;
+    border: 0px;
+    align-self: center;
+}
+
+.help{
+    height: 611px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+.list , .list2{
+    height: 22%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.donation{
+    height: 462px;
+    background-color: #F6F6F6;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.donation-dog{
+    width: 50%;
+    height: 55%;
+    background-image: url(../../Assets/donation-dog.png);
+    background-repeat: no-repeat;
+    background-size:contain
+}
+.card{
+    background-color: #F1CDB3;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    border-radius: 10px;
+    border: 0px;
+    padding: 5px;
+}
+.donation-content{
+    width: 380px;
+}
+
+footer{
+    background-image: url(../../Assets/start-screen-gradient-background.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+
 }
