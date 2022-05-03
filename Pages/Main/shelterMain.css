@@ -236,7 +236,9 @@ color: #545454;
 .donation-content{
     width: 380px;
 }
-
+h2{
+    color:  #545454;
+ }
 footer{
     background-image: url(../../Assets/start-screen-gradient-background.png);
     background-repeat: no-repeat;
@@ -284,7 +286,7 @@ letter-spacing: 0.06em;
 
 /* color-light-xl */
 
-color: #FFFFFF;
+color: #FFFFFF !important;
 padding-bottom: 64px;
 }
 .email, .phone{
@@ -324,4 +326,7 @@ color: #F6F6F6;
 }
 .make-friend:hover{
 background-color: #c77d47;
+}
+h2,h1{
+    font-family: Georgia,Times,Times New Roman,serif; 
 }
