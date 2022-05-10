@@ -1,0 +1,146 @@
+
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0 auto !important;
+    max-width: 1280px;
+    background-color: #f1cdb3;
+    
+    
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(100, 79, 79);
+  
+    
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 50vw;
+    list-style: none;
+    align-items: center;
+    align-content: center;
+}
+li a{
+  text-decoration: none;
+   color:  black;
+};
+
+
+section #Cozy{
+ Color:#f1cdb3 !important;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    background-image: url(../../Assets/start-screen-gradient-background.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+align-items: flex-end;
+justify-content: space-between;
+padding-right: 30px;
+}
+.footer-image{
+    background-image: url(../../Assets/footer-puppy.svg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    width: 43%;
+    height: 85%;
+
+
+    
+}
+.email, .phone{
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+justify-content: flex-start;
+
+  
+   
+}
+.footer-address, .footer-contact{
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+    justify-content: space-around;
+    height: 100%;
+    padding-left: 40px;
+    font-style: normal;
+font-weight: 400;
+font-size: 35px;
+line-height: 130%;
+/* or 45px */
+
+letter-spacing: 0.06em;
+
+/* color-light-xl */
+
+color: #FFFFFF !important;
+padding-bottom: 64px;
+}
+.email, .phone{
+    font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 115%;
+/* identical to box height, or 23px */
+
+letter-spacing: 0.06em;
+
+/* color-primary */
+
+color: #F1CDB3;
+
+}
+li:hover{
+    border-bottom: 2px solid #F1CDB3 ;
+}
+.left:hover,.right:hover{
+background-color: #545454;
+border-radius: 50%;
+}
+.cat-card:hover,.jenifer:hover,.woody:hover{
+    background-color: #f1cdb3;
+    
+}
+
+#cat-card:hover  #btn-cat,.jenifer:hover #btn-jenifer, .woody:hover #btn-woody, .btn-pets:hover {
+    background-color: #c7814f;
+    
+}
+footer a{
+text-decoration: none;
+text-transform: none;
+color: #F6F6F6;
+}
+.make-friend:hover{
+background-color: #c77d47;
+}
+h2,h1{
+    font-family: Georgia,Times,Times New Roman,serif; 
+}
