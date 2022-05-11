@@ -14,7 +14,7 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: rgb(100, 79, 79);
+    background-color:white;
   
     
 }
@@ -29,7 +29,7 @@ ul{
 }
 li a{
   text-decoration: none;
-   color:  black;
+   color:  #545454;
 };
 
 
@@ -37,7 +37,22 @@ section #Cozy{
  Color:#f1cdb3 !important;
   
 }
-
+nav{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+header{
+    height: 120px;
+padding-left: 40px;
+}
+#Cozy{
+    font-size: 32px;
+}
+.Logo{
+    margin: 0px auto;
+}
 
 
 
