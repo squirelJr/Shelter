@@ -330,3 +330,7 @@ background-color: #c77d47;
 h2,h1{
     font-family: Georgia,Times,Times New Roman,serif; 
 }
+
+h1,h2,h3,h4{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
