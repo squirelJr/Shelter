@@ -52,7 +52,10 @@ padding-left: 40px;
 }
 .Logo{
     margin: 0px auto;
+    height: 60px;
+   
 }
+
 .main-container{
     height: 100%;
    
@@ -62,6 +65,8 @@ padding-left: 40px;
     align-items: center;
     justify-content: space-around;
     padding-bottom: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 main{
     background-color: #F6F6F6;
@@ -80,6 +85,7 @@ main{
     justify-content: center;
     align-items: center;
     margin:20px ;
+    padding-bottom: 30px;
 
 }
 .cat{
