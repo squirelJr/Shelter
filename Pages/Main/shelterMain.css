@@ -1,8 +1,14 @@
 *{
     box-sizing: border-box;
+   
+}
+html{
+    width: 100%;
+    margin: 0 auto !important;
 }
 body{
     margin: 0 auto !important;
+    width: 100%;
     max-width: 1280px;
     background-color: #f1cdb3;
     
@@ -11,6 +17,7 @@ body{
 .startScreen{
 background-image: url(../../Assets/start-screen-gradient-background.png);
 background-repeat: no-repeat;
+background-size: 100%;
 background-size: cover;
 width: 1280px;
 padding: 40px 40px 0px 40px;
@@ -57,10 +64,11 @@ top: 163px;
 }
 .start-dog{
    
-    width: 50vw;
-    height: 50vw;
-    left: calc(50% - 698px/2 + 251px);
+    width: 50%;
+    height: 42vw;
+   left: calc(50% - 698px/2 + 251px);
     bottom: 0px;
+ 
     background: url(../../Assets/start-screen-puppy.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -86,7 +94,8 @@ top: 163px;
 }
 
 .About{
-    width: 1280px ;
+    width: 100%;
+    max-width: 1280px ;
     height: 588px;
     background-color: #FFFFFF;
 }
@@ -194,12 +203,14 @@ color: #545454;
     justify-content: center;
     align-content: center;
 }
-.list , .list2{
-    height: 22%;
+.list {
+    /* height: 22%; */
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    justify-content: center;
     
 }
 .item{
@@ -207,6 +218,7 @@ color: #545454;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: calc(20%);
 }
 
 .donation{
@@ -329,8 +341,177 @@ background-color: #c77d47;
 }
 h2,h1{
     font-family: Georgia,Times,Times New Roman,serif; 
+
+    font-weight: 400;
 }
 
 h1,h2,h3,h4{
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.footer-info{
+    display: flex;
+    flex-direction: row;
+}
+
+@media only screen and (max-width: 768px) {
+ 
+    header{
+        max-width: 708px;
+
+        height: 60px;
+    }
+    html, body {margin: 0;  overflow: scroll}
+
+   .start-screen{
+    /* padding: 30px 30px 0px 30px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+   }
+   .startScreen{
+       height: 1168px;
+     
+   }
+   .Logo h1{
+       line-height: 110%;
+       margin: 0PX;
+   }
+    .Logo h4{
+   margin-top: 10px;
+        font-size: 15px;
+        line-height: 15PX;
+    }
+    li a{
+       font-size: 15px;
+       padding: 0px
+      }
+      nav{
+        width: 58vw !important;
+      }
+      ul{
+          width: 100%;
+      }
+      .start-dog{
+          width: 80%;
+          height: 50%;
+          background-size: cover;
+   
+      }
+.make-friend{
+    max-width: 207px;
+    align-self: center;
+  
+    
+}
+.make-friend a{
+    text-decoration: none;
+    color: #292929;
+}
+.content h2{
+margin: 0px;
+align-items: center;
+font-size: 44px;
+max-width: 310px;
+}
+.About{
+    height: 1048px;
+
+}
+.AboutContainer{
+    flex-direction: column;
+    order: 1;
+    
+  
+}
+.AboutContent{
+    margin: 0px;
+    width: 430px;
+    
+}
+.AboutContent p{
+    font-weight: 400;
+font-size: 15px;
+width: 430px;
+line-height: 160%;
+}
+.AboutContent h2{
+    font-weight: 400;
+font-size: 35px;
+width: 370px;
+line-height: 130%;
+margin: 0px;
+
+}
+.AboutImage{
+    margin: 0px;
+    order: 2;
+    width: 44%;
+    height: 47%;
+}
+.woody{
+    display: none;
+}
+.cat-card,.jenifer{
+    height: 435px;
+    justify-content: space-between;
+}
+.pets-title{
+    font-size: 35px;
+    padding: 0px;
+    margin: 0px;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+}
+.btn-pets{
+   width: 260px;
+   height: 52px; 
+}
+.item{
+    width: 33.3%;
+}
+.help-title{
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+}
+.donation{
+    display: flex;
+    flex-direction: column;
+    height: 783px;
+    justify-content: space-around;
+}
+.donation-dog{
+    order:2;
+    background-size: cover;
+    max-height: 261px;
+    width: 66%;
+}
+.donation-content{
+    order:1;
+    max-width: 380px;
+    max-height: 282px;
+}
+.donation-content h2{
+    font-size: 35px;
+    font-weight: 400;
+
+}
+.card{
+    width: 349px;
+    height: 43px;
+    font-size: 20px;
+    justify-content: space-around;
+  
+}
+.card a{
+    text-decoration: none;
+}
+footer{
+    height: 639px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 }
