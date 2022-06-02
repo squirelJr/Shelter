@@ -360,7 +360,7 @@ h1,h2,h3,h4{
 
         height: 60px;
     }
-    html, body {margin: 0;  overflow: scroll}
+    html, body {margin: 0; width: 100%; overflow: auto}
 
    .start-screen{
     /* padding: 30px 30px 0px 30px; */
