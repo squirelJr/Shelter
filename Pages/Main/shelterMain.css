@@ -53,12 +53,12 @@ section #Cozy{
   
 }
 .content{
-width: 460px;
+width: 60vw;
 height: 322px;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
-width: 460px;
+
 height: 322px;
 left: 0px;
 top: 163px;
@@ -143,33 +143,34 @@ background-repeat: no-repeat;
     align-items: center;
     justify-content: space-around;
 }
-.left{
+.left, .left1{
     background-image: url(../../Assets/button_arrow.png);
     background-repeat: no-repeat;
     background-size: contain;
     width: 55px;
     height: 55px;
 }
-.right{
+.right,.right1{
     background-image: url(../../Assets/button_arrow\ \(1\).png);
     background-repeat: no-repeat;
     background-size: contain;
     width: 55px;
     height: 55px; 
 }
-
+.left1,.right1{
+    display: none;
+}
 .cat-card,.jenifer,.woody{
     background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 }
 .cat{
     border-radius: 9px 9px 0px 0px;
-    width: 270px;
-    height: 270px;
+    width: 100%;
+    height: 62%;
 
 }
 .card-button{
@@ -251,6 +252,7 @@ color: #545454;
 }
 h2{
     color:  #545454;
+    font-size: 4.5vw;
  }
 footer{
     background-image: url(../../Assets/start-screen-gradient-background.png);
@@ -353,7 +355,9 @@ h1,h2,h3,h4{
     display: flex;
     flex-direction: row;
 }
-
+.burger{
+    display: none;
+}
 @media only screen and (max-width: 768px) {
  
     header{
@@ -393,6 +397,7 @@ h1,h2,h3,h4{
       }
       ul{
           width: 100%;
+          padding: 0px;
           justify-content: space-around;
       }
       .start-dog{
@@ -415,7 +420,7 @@ h1,h2,h3,h4{
 .content h2{
 margin: 0px;
 align-items: center;
-font-size: 44px;
+font-size: 4.5vw ;
 max-width: 310px;
 }
 .About{
@@ -457,9 +462,13 @@ margin: 0px;
     display: none;
 }
 .cat-card,.jenifer{
-    height: 435px;
+    height: 57vw;
     width: 35vw;
     justify-content: space-between;
+}
+.cat-card image,.jenifer image{
+    width: 100%;
+    height: 100%;
 }
 .pets-title{
     font-size: 35px;
@@ -500,7 +509,7 @@ margin: 0px;
     max-height: 282px;
 }
 .donation-content h2{
-    font-size: 35px;
+    font-size: 4.5vw;
     font-weight: 400;
 
 }
@@ -527,5 +536,224 @@ footer{
     width: 39vw;
     height: 40vw;
 }
+.card-button{
+    width: 25vw;
+    height: 7vw;
+}
+}
 
+
+@media only screen and (max-width: 320px) {
+    html, body {margin: 0 auto !important; width: 100%; overflow: auto;}
+.burger{
+    display: flex;
+    position: absolute;
+    right: 53px;
+    top: 51px;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 30px;
+}
+ul a{
+    font-size: 32px;
+}
+ul{
+   display: none; 
+}
+.burger hr{
+    border:2px solid #c77d47;
+    width: 30px;
+    margin: 0px;
+    z-index: 2;
+}
+.start-screen{
+    padding: 0px;
+    margin: 0px;
+}
+.startScreen{
+    padding: 30px 10px 0px 10px;
+    margin: 0%;
+    height: 823px;
+}
+h1{
+    font-size: 2rem;
+}
+ .Logo h4{
+   font-size: 0.8rem;
+   font-weight: 400;
+   letter-spacing: 0.06em;
+}
+.Logo{
+    width: 55vw;
+}
+
+.burger:active + ul{
+display: flex ;
+flex-direction: column;
+
+background-color: #292929;
+height: 823px;
+width: 320px;
+position: absolute;
+right: 0;
+top:0;
+margin: 0px;
+line-height: 51.2px;
+
+}
+.AboutContent p{
+    width: 100%;
+    font-size: 15px;
+}
+.AboutContent{
+    width: 100%;
+}
+h2{
+    font-size: 25px !important;
+    
+    text-align: center;
+
+}
+
+.content h4,.content{
+    width: 300px;
+    text-align: center;
+    font-weight: 400;
+    line-height: 115%;
+    letter-spacing: 00.06em;
+}
+
+.make-friend{
+    width: 207px;
+
+}
+.start-dog{
+    height: 86vw;
+    width: 81vw;
+    margin-top: -30px;
+}
+
+.AboutContainer{
+    height: 974px; 
+    padding:42.4px 10px ;
+}
+.AboutImage{
+    width: 80vw;
+    height: 110vw;
+}
+.jenifer{
+    display: none;
+}
+.cat-card{
+    width: 90vw;
+    height:135vw ;
+    padding-bottom: 30px;
+}
+.slider{
+    flex-direction: column;
+
+}
+.miniSlider{
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
+    justify-content: space-around;
+}
+.left, .right{
+display: none;
+}
+.left1,.right1{
+    display: flex;
+    margin-top: 20px;
+}
+.card-button{
+    width: 187px;
+    height: 52px;
+}
+.slider{
+    height: max-content;
+}
+.btn-pets{
+    width: 260px;
+}
+.pets{
+    padding:42px 25px ;
+    height: 791px;
+}
+.help{
+    height: 745px;
+}
+.list{
+    justify-content: flex-start;
+}
+.item{
+    width: 50%;
+}
+.donation-content{
+    max-width: 320px;
+    padding: 0px 10px;
+    height: max-content;
+}
+h5{
+    font-size: 14px;
+    font-weight: 400;
+}
+.card{
+    max-width: 281px;
+    font-size: 15px;
+}
+.donation{
+    padding: 42px 10px;
+    height: 542px;
+}
+.donation-dog{
+    width: 260px;
+    height: 135px;
+}
+#footer{
+    display: flex;
+    flex-direction: column;
+align-items: center;
+    align-items: center;
+ margin: 0px;
+ padding: 0px 10px;
+ height: 809px;
+
+ 
+}
+#footer a,h3{
+    font-size: 25px;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    font-weight: 400;
+    line-height: 23px;
+}
+#footer a{
+    color:#F1CDB3
+}
+.footer-address{
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.footer-contact{
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0px;
+    align-items: center;
+}
+.footer-info{
+    flex-direction: column;
+    height: 72%;
+    align-items: center;
+}
+.footer-image{
+    width: 87%;
+    height: 36%;
+}
 }
