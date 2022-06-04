@@ -366,6 +366,7 @@ h1,h2,h3,h4{
         height: 60px;
     }
     html, body {margin: 0; width: 100%; overflow: auto}
+    
 
    .start-screen{
     /* padding: 30px 30px 0px 30px; */
@@ -540,6 +541,45 @@ footer{
     width: 25vw;
     height: 7vw;
 }
+.burger{
+    display: flex;
+    position: absolute;
+    right: 53px;
+    top: 51px;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 30px;
+}
+ul a{
+    font-size: 32px;
+}
+ul{
+   display: none; 
+}
+.burger hr{
+    border:2px solid #c77d47;
+    width: 30px;
+    margin: 0px;
+    z-index: 2;
+}
+.burger:active + ul{
+    display: flex ;
+    flex-direction: column;
+    
+    background-color: #292929;
+    height: 823px;
+    width: 320px;
+    position: absolute;
+    right: 0;
+    top:0;
+    margin: 0px;
+    line-height: 51.2px;
+    
+    }
+    ul{
+        display: none; 
+     }
 }
 
 

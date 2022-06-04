@@ -268,33 +268,6 @@ h1,h2,h3,h4{
         height: 120px;
     }
     html, body {margin: 0 auto; max-width: 768px; width: 100%; overflow: auto}
-    nav{
-        width: 61%;
-        padding-right:30px ;
-    }
-    ul{
-        width: 100%;
-        justify-content: space-between;
-        margin: 0px;
-        padding: 0px;
-    }
-    .pagination{
-        width: 45%;
-    }
-    header{
-        padding-left: 30px;
-    }
-    footer{
-        height: 639px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-   
-}
-@media only screen and (max-width: 768px) {
-
-    html, body {margin: 0 auto !important; width: 100%; overflow: auto;}
     .burger{
         display: flex;
         position: absolute;
@@ -304,6 +277,84 @@ h1,h2,h3,h4{
         justify-content: space-between;
         width: 30px;
         height: 30px;
+    }
+    ul a{
+        font-size: 32px;
+    }
+    ul{
+       display: none; 
+    }
+    .burger hr{
+        border:2px solid #c77d47;
+        width: 30px;
+        margin: 0px;
+        z-index: 2;
+    }
+    .burger:active + ul{
+        display: flex ;
+        flex-direction: column;
+        
+        background-color: #292929;
+        height: 823px;
+        width: 320px;
+        position: absolute;
+        right: 0;
+        top:0;
+        margin: 0px;
+        line-height: 51.2px;
+        
+        }
+        ul{
+            display: none; 
+         }
+    footer{
+        height: 639px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+   
+}
+@media only screen and (max-width: 320px) {
+
+    html, body {margin: 0 auto !important; width: 100%; overflow: hidden;}
+    .burger{
+        display: flex;
+        position: absolute;
+        right: 53px;
+        top: 51px;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 30px;
+    }
+    
+    .burger:active + ul{
+        display: flex ;
+        flex-direction: column;
+        
+        background-color: #292929;
+        height: 823px;
+        width: 320px;
+        position: absolute;
+        right: 0;
+        top:0;
+        margin: 0px;
+        line-height: 51.2px;
+        
+        }
+    
+    ul a{
+        font-size: 32px;
+    }
+    ul{
+       display: none; 
+    }
+    .burger hr{
+        border:2px solid #292929;
+        width: 30px;
+        margin: 0px;
+        z-index: 2;
     }
     h1{
         font-size: 2rem;
