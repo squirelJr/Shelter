@@ -15,6 +15,12 @@ body{
     
     
 }
+html{
+    overflow-y: auto;
+}
+body{
+    overflow-y: hidden;
+}
 .startScreen{
 background-image: url(../../Assets/start-screen-gradient-background.png);
 background-repeat: no-repeat;
@@ -366,6 +372,12 @@ h1,h2,h3,h4{
         height: 60px;
     }
     html, body {margin: 0; width: 100%; overflow: auto}
+    html{
+        overflow-y: auto;
+    }
+    body{
+        overflow-y: hidden;
+    }
     
 
    .start-screen{
@@ -585,6 +597,12 @@ ul{
 
 @media only screen and (max-width: 320px) {
     html, body {margin: 0 auto !important; width: 100%; overflow: auto;}
+    html{
+        overflow-y: auto;
+    }
+    body{
+        overflow-y: hidden;
+    }
 .burger{
     display: flex;
     position: absolute;
