@@ -5,6 +5,7 @@
 }
 html{
     overflow: scroll;
+    overflow-x: hidden;
 }
 
 body{
@@ -12,6 +13,7 @@ body{
     max-width: 1280px;
     background-color: #f1cdb3;
     overflow-y: hidden;
+    overflow-x: hidden;
     
     
 }
@@ -275,9 +277,11 @@ h1,h2,h3,h4{
     html, body {margin: 0 auto; max-width: 768px; width: 100%; }
     html{
         overflow-y: auto;
+        overflow-x: hidden;
     }
     body{
         overflow-y: hidden;
+        overflow-x: hidden;
     }
     
     .burger{
@@ -332,9 +336,11 @@ h1,h2,h3,h4{
     html, body {margin: 0 auto !important; width: 100%; overflow: hidden;}
     html{
         overflow-y: auto;
+        overflow-x: hidden;
     }
     body{
         overflow-y: hidden;
+        overflow-x: hidden;
     }
     .burger{
         display: flex;

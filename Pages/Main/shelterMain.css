@@ -17,9 +17,11 @@ body{
 }
 html{
     overflow-y: auto;
+    overflow-x: hidden;
 }
 body{
     overflow-y: hidden;
+    overflow-x: hidden;
 }
 .startScreen{
 background-image: url(../../Assets/start-screen-gradient-background.png);
@@ -374,9 +376,11 @@ h1,h2,h3,h4{
     html, body {margin: 0; width: 100%; overflow: auto}
     html{
         overflow-y: auto;
+        overflow-x: hidden;
     }
     body{
         overflow-y: hidden;
+        overflow-x: hidden;
     }
     
 
@@ -599,9 +603,11 @@ ul{
     html, body {margin: 0 auto !important; width: 100%; overflow: auto;}
     html{
         overflow-y: auto;
+        overflow-x: hidden;
     }
     body{
         overflow-y: hidden;
+        overflow-x: hidden;
     }
 .burger{
     display: flex;
