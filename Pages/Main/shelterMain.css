@@ -5,6 +5,7 @@
 html{
     width: 100%;
     margin: 0 auto !important;
+   
 }
 body{
     margin: 0 auto !important;
@@ -15,12 +16,8 @@ body{
     
     
 }
-html{
-    overflow-y: auto;
-    overflow-x: hidden;
-}
 body{
-    overflow-y: hidden;
+    overflow-y: auto;
     overflow-x: hidden;
 }
 .startScreen{
@@ -373,6 +370,9 @@ h1,h2,h3,h4{
 .burger{
     display: none;
 }
+.stop-scrolling{
+    overflow: hidden !important;
+}
 @media only screen and (max-width: 768px) {
  
     header{
@@ -380,11 +380,8 @@ h1,h2,h3,h4{
 
         height: 60px;
     }
-    html, body {margin: 0; width: 100%; overflow: auto}
-    html{
-        overflow-y: auto;
-        overflow-x: hidden;
-    }
+    html, body {margin: 0; width: 100%;}
+    
     body{
         overflow-y: hidden;
         overflow-x: hidden;
@@ -668,10 +665,7 @@ ul{
 
 @media only screen and (max-width: 320px) {
     html, body {margin: 0 auto !important; width: 100%; overflow: auto;}
-    html{
-        overflow-y: auto;
-        overflow-x: hidden;
-    }
+  
     body{
         overflow-y: hidden;
         overflow-x: hidden;
