@@ -19,23 +19,34 @@ body{
 body{
     overflow-y: auto;
     overflow-x: hidden;
+    margin-trim: all !important;
 }
 .startScreen{
 background-image: url(../../Assets/start-screen-gradient-background.png);
 background-repeat: no-repeat;
 background-size: 100%;
 background-size: cover;
-width: 1280px;
-padding: 40px 40px 0px 40px;
+
+
 margin: 0 auto;
 max-width: 1280px;
-width: 100%;
+height: 908px;
+
 
 }
 header{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    position: fixed;
+   
+    width: 100% ;
+    max-width: 1280px;
+  padding-top: 30px;
+    align-content: space-around;
+
+  
+    z-index: 100;
     
 }
 ul{
@@ -58,26 +69,30 @@ section #Cozy{
   
 }
 .content{
-width: 60vw;
-height: 322px;
+width: 64%;
+min-height: 322px;
+height: fit-content;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
 
-height: 322px;
+
 left: 0px;
 top: 163px;
 }
 .start-dog{
    
-    width: 50%;
-    height: 42vw;
+    width: 88%;
+    height: 57vw;
+    max-height: 89%;
    left: calc(50% - 698px/2 + 251px);
     bottom: 0px;
  
     background: url(../../Assets/start-screen-puppy.png);
     background-repeat: no-repeat;
     background-size: cover;
+    align-self: flex-end;
+    
      
 }
 .start-screen{
@@ -86,14 +101,16 @@ top: 163px;
     align-items: center;
     align-items: space-between;
     justify-content: space-between;
+    padding: 0px 40px 0px 40px;
+
     
 }
 .Logo{
     line-height: 15px;
 }
 .make-friend{
-    width: 50%;
-    height: 50px;
+    width: 207px;
+    height: 52px;
     background: #F1CDB3;
     border-radius: 100px;
     border: 0px;
@@ -264,7 +281,7 @@ color: #545454;
 }
 h2{
     color:  #545454;
-    font-size: 4.5vw;
+    font-size: 2rem;
  }
 footer{
     background-image: url(../../Assets/start-screen-gradient-background.png);
@@ -281,8 +298,10 @@ padding-right: 30px;
     background-image: url(../../Assets/footer-puppy.svg);
     background-repeat: no-repeat;
     background-size:cover;
-    width: 50vw;
-    height: 85%;
+    width: 27%;
+    max-width: 89%;
+    max-height: 89%;
+    height: 24vw;
 
 
     
@@ -296,6 +315,10 @@ justify-content: flex-start;
   
    
 }
+#nav{
+    max-width: 1000px;
+}
+
 .footer-address, .footer-contact{
     display: flex;
     flex-direction: column;
@@ -305,7 +328,7 @@ justify-content: flex-start;
     padding-left: 40px;
     font-style: normal;
 font-weight: 400;
-font-size: 2.4vw;
+font-size:25px;
 line-height: 130%;
 /* or 45px */
 
@@ -373,31 +396,37 @@ h1,h2,h3,h4{
 .stop-scrolling{
     overflow: hidden !important;
 }
+
 @media only screen and (max-width: 768px) {
  
     header{
-        max-width: 708px;
-
+        max-width: 100%;
+/* padding-left: 30px; */
         height: 60px;
     }
-    html, body {margin: 0; width: 100%;}
+    html, body {margin: 0 ; width: 100%;}
     
     body{
-        overflow-y: hidden;
+        overflow-y: auto;
         overflow-x: hidden;
     }
     
 
    .start-screen{
-    /* padding: 30px 30px 0px 30px; */
+    padding: 50px 30px 0px 30px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
+    height: 100%;
    }
    .startScreen{
        height: 1168px;
-       padding: 30px 30px 0px 30px;
+       /* padding: 0px 30px 0px 30px; */
      
+   }
+   header{
+    padding-top: 30px;
+    height: fit-content;
    }
    .Logo h1{
        line-height: 110%;
@@ -414,18 +443,26 @@ h1,h2,h3,h4{
        
       }
       nav{
-        width: 58vw !important;
+        width: 58% ;
+        display: flex;
+        padding-top: 15%;
+   
+      }
+      #nav{
+          display: flex;
       }
       ul{
           width: 100%;
           padding: 0px;
           justify-content: space-around;
+        
       }
       .start-dog{
-          width: 74vw;
-          height: 75vw;
-          background-size: contain;
-          margin-left: 20vw;
+        background-size: cover;
+        /* margin-left: 20vw; */
+        width: 88%;
+        height: 77vw;
+        align-self: center;
    
       }
 .make-friend{
@@ -443,6 +480,12 @@ margin: 0px;
 align-items: center;
 font-size: 4.5vw ;
 max-width: 310px;
+}
+.content{
+    width:73%;
+    height:max-content;
+    min-height: 322px;
+    margin-top: 60px;
 }
 .About{
     height: 1048px;
@@ -462,7 +505,7 @@ max-width: 310px;
 .AboutContent p{
     font-weight: 400;
 font-size: 2vw;
-width: 430px;
+width: 100%;
 line-height: 160%;
 }
 .AboutContent h2{
@@ -565,7 +608,7 @@ footer{
     display: flex;
     position: absolute;
     right: 53px;
-    top: 51px;
+    top: 30px;
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
@@ -594,7 +637,7 @@ ul{
     height: 823px;
     width: 320px;
     position: absolute;
-    right: 0;
+    right: -30px;
     top:0;
     margin: 0px;
     line-height: 51.2px;
@@ -610,6 +653,7 @@ ul{
      }
 }
 @media only screen and (max-width: 430px) {
+    html, body {margin: 0 auto !important; width: 100%; overflow-x: hidden;}
     .card{
         width:80vw !important;
         font-size:4vw;
@@ -618,6 +662,7 @@ ul{
         width: min-content;
         padding: 20px 30px;
     }
+    
     #footer{
         display: flex;
         flex-direction: column;
@@ -663,11 +708,14 @@ ul{
 
 }
 
+@media only screen and (max-width: 470px) {
+    html, body {margin: 0 auto ; width: 100%; overflow-x: hidden;}
+}
 @media only screen and (max-width: 320px) {
-    html, body {margin: 0 auto !important; width: 100%; overflow: auto;}
+    html, body {margin: 0 auto ; width: 100%; overflow-x: hidden;}
   
     body{
-        overflow-y: hidden;
+        overflow-y: auto;
         overflow-x: hidden;
     }
 .burger{
@@ -697,17 +745,27 @@ ul{
     margin: 0px;
 }
 .startScreen{
-    padding: 30px 10px 0px 10px;
+    padding: 0px 10px 0px 10px;
     margin: 0%;
     height: 823px;
 }
 h1{
-    font-size: 2rem;
+    font-size: 32px;
+}
+header{
+    /* padding-top: 30px; */
+height: max-content;
+/* padding-left: 10px; */
+}
+.burger{
+    top:35px;
 }
  .Logo h4{
    font-size: 0.8rem;
    font-weight: 400;
    letter-spacing: 0.06em;
+   margin-bottom: 0px;
+   margin-top:5px;
 }
 .Logo{
     width: 55vw;
@@ -736,7 +794,8 @@ line-height: 51.2px;
 }
 h2{
     font-size: 25px !important;
-    
+    font-weight: 400;
+line-height: 130%;
     text-align: center;
 
 }
@@ -748,15 +807,19 @@ h2{
     line-height: 115%;
     letter-spacing: 00.06em;
 }
-
+.content{
+    margin-top: 110px;
+}
 .make-friend{
     width: 207px;
+    height: 52px;
 
 }
 .start-dog{
     height: 86vw;
     width: 81vw;
     margin-top: -30px;
+    /* margin-bottom: 20px; */
 }
 
 .AboutContainer{
@@ -882,3 +945,4 @@ align-items: center;
     height: 36%;
 }
 }
+

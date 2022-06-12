@@ -1,7 +1,7 @@
 let header =document.getElementById("header");
 window.addEventListener('scroll',function(){
-  if(scrollY>908){
-    header.style.backgroundColor='#332c28';
+  if(scrollY>100){
+    header.style.backgroundColor='white';
   }else{
     header.style.backgroundColor='';
   }
@@ -24,7 +24,10 @@ const slideInConfig={duration:500,iteration:1}
 const rotateHalf = [{ transform: 'rotate(90deg)' }];
 const rotateFull = [{ transform: 'rotate(180deg)' }];
 const rotateConfig = { duration: 500, iteration: 1 };
-let startScreen = document.getElementsByClassName("start-screen")
+
+let dark= document.createElement("div");
+dark.style.cssText=`width:100%;height:100%;background-color:black;opacity:0.6;position:absolute;top:0;display:none;`
+document.body.append(dark);
 let bool = false;
 burger.addEventListener("click", function (event) {
   bool = !bool;
@@ -32,14 +35,16 @@ burger.addEventListener("click", function (event) {
   if (bool) {
     document.body.classList.add("stop-scrolling");
     burger.animate(rotateHalf, rotateConfig);
-    burger.style.animationFillMode = "forward";
-    startScreen[0].style.cssText = `backgoround-color:black;opacity:0.4;`;
+    burger.style.animationFillMode = "forwards";
+    dark.style.display="block"
+    // startScreen.style.cssText = `backgoround-color:black;opacity:0.4;`;
     
-    startScreen[0].addEventListener("click", function () {
+    dark.addEventListener("click", function () {
       if(ul[0].classList.contains("burgerOpen")){
       burger.animate(rotateFull, rotateConfig)
+       dark.style.display="none"
       };      
-      startScreen[0].style.cssText = `backgoround-color:none;opacity:1;`;
+      
       ulById.animate(slideIn,slideInConfig);
       setTimeout( ()=>{ul[0].classList.toggle("burgerOpen", false)},500);
       console.log(bool)
@@ -52,7 +57,7 @@ burger.addEventListener("click", function (event) {
     burger.animate(rotateFull, rotateConfig)
     setTimeout( ()=>{ul[0].classList.toggle("burgerOpen", false)},500);
     ulById.animate(slideIn,slideInConfig);
-    startScreen[0].style.cssText = `backgoround-color:none;opacity:1;`;
+    dark.style.display="none"
     document.body.classList.remove("stop-scrolling");
   }
 
