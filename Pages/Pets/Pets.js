@@ -90,78 +90,218 @@ async function set() {
 set();
 
 
-//slider right
-// let j =1;
 
 
 const slideRight = [{ transform: 'translateX(100vw)' }];
 const slideFromLeft = [{ transform: 'translateX(-100vw)' }];
 const slideRightTiming = { duration: 500, iterations: 1 };
-
+let pageCount =document.getElementById("page")
 let right = document.getElementById("right");
+var count=1;
+
+
+// slider right
+let j = 0;
+let ranNums = [];
+let emptyArray=[];
+function getrandom(){
+let nums = [0,1,2,3,4,5,6,7];
+
+    let i = nums.length;
+  
+    for(let a=i;a>0;a--) {
+    j = Math.floor(Math. random() * (i));
+    ranNums.push(nums[j]);
+    }
+    return ranNums;
+}
+
+
 right.addEventListener("click", function changeCards() {
-  let cards = document.querySelectorAll(".petCard");
-
-
-  let j = Math.ceil(Math.random() * 5);
-  console.log(j);
+  let cards = document.querySelectorAll(".cat-card");
+  
+  
   getPets().then(data => {
+ 
+    
+   
     const petImages = document.getElementsByClassName("cat");
     const petNames = document.getElementsByClassName("petName");
+    if(count<6){
     cards.forEach(element => {
       element.animate(slideRight, slideRightTiming);
     })
-    for (let i = 0; i < petImages.length; i++) {
+   
+    getrandom();
 
-      petImages[i].rem = ``;
-      petNames[i].innerHTML = ``;
-      petImages[i].src = `${data[i + j].img}`;
-      petNames[i].innerHTML = `${data[i + j].name}`;
+    for (let k = 0; k < petImages.length; k++) {
+        let access=ranNums[k];
+
+
+
+      
+      petNames[k].innerHTML = ``;
+      petImages[k].src = `${data[access].img}`;
+      petNames[k].innerHTML = `${data[access].name}`;
+     
     }
-
-
+    ranNums = ranNums.splice(1,8);
+   
+count=count+1;
+pageCount.innerText=`${count}`;
 
     // if(j>2){
     //   j=1;
     // }
 
-    console.log("jei" + j);
+}
   })
 });
 //j==1;
 //slider left
-let k = 2;
-let left = document.getElementById("left");
-left.addEventListener("click", function () {
 
-  let j = Math.ceil(Math.random() * 5);
-  getPets().then(data => {
-    const petImages = document.getElementsByClassName("cat");
-    const petNames = document.getElementsByClassName("petName");
-
-    let cards = document.querySelectorAll(".petCard");
-    cards.forEach(element => {
-      element.animate(slideFromLeft, slideRightTiming);
+left.addEventListener("click", function changeCards() {
+    let cards = document.querySelectorAll(".cat-card");
+    
+    
+    getPets().then(data => {
+   
+      
+     
+      const petImages = document.getElementsByClassName("cat");
+      const petNames = document.getElementsByClassName("petName");
+      if(count>1){
+          left.addEventListener("mouseover", function hover(event){
+left.style.cssText='background-color:#F1CDB3;color:black;cursor:pointer;'
+          })
+      cards.forEach(element => {
+        element.animate(slideRight, slideRightTiming);
+      })
+     
+      getrandom();
+   
+      for (let k = 0; k < petImages.length; k++) {
+          let access=ranNums[k];
+        
+        petNames[k].innerHTML = ``;
+        petImages[k].src = `${data[access].img}`;
+        petNames[k].innerHTML = `${data[access].name}`;
+       
+      }
+      ranNums = ranNums.splice(1,8);
+  
+  count--;
+  pageCount.innerText=`${count}`;
+  
+      // if(j>2){
+      //   j=1;
+      // }
+  
+    }else{
+        left.removeEventListener("mouseover",  event)
+    }   
     })
-    for (let i = 0; i < petImages.length; i++) {
-      petImages[i].rem = ``;
-      petNames[i].innerHTML = ``;
-      petImages[i].src = `${data[i + j].img}`;
-      petNames[i].innerHTML = `${data[i + j].name}`;
-    }
-  })
-});
 
+  });
+
+let doubleRight=document.getElementById("double-right");
+
+doubleRight.addEventListener("click", function changeCards() {
+    count=5;
+    let cards = document.querySelectorAll(".cat-card");
+    
+    
+    getPets().then(data => {
+   
+      
+     
+      const petImages = document.getElementsByClassName("cat");
+      const petNames = document.getElementsByClassName("petName");
+     
+     if(count<6){
+      cards.forEach(element => {
+        element.animate(slideRight, slideRightTiming);
+      })
+     
+      getrandom();
+  
+      for (let k = 0; k < petImages.length; k++) {
+          let access=ranNums[k];
+  
+  
+  
+        
+        petNames[k].innerHTML = ``;
+        petImages[k].src = `${data[access].img}`;
+        petNames[k].innerHTML = `${data[access].name}`;
+       
+      }
+      ranNums = ranNums.splice(1,8);
+     count++;
+  console
+  pageCount.innerText=`${count}`;
+  
+      // if(j>2){
+      //   j=1;
+      // }
+    }
+  
+    })
+  });
+  let doubleLeft=document.getElementById("double-left");
+ 
+doubleLeft.addEventListener("click", function changeCards() {
+    count=2;
+    let cards = document.querySelectorAll(".cat-card");
+    
+    
+    getPets().then(data => {
+   
+      
+     
+      const petImages = document.getElementsByClassName("cat");
+      const petNames = document.getElementsByClassName("petName");
+     
+     if(count>1){
+      cards.forEach(element => {
+        element.animate(slideRight, slideRightTiming);
+      })
+     
+      getrandom();
+  
+      for (let k = 0; k < petImages.length; k++) {
+          let access=ranNums[k];
+  
+  
+  
+        
+        petNames[k].innerHTML = ``;
+        petImages[k].src = `${data[access].img}`;
+        petNames[k].innerHTML = `${data[access].name}`;
+       
+      }
+      ranNums = ranNums.splice(1,8);
+     count--;
+  console
+  pageCount.innerText=`${count}`;
+  
+      // if(j>2){
+      //   j=1;
+      // }
+    }
+  
+    })
+  });
 //PopUp
-let cards = document.querySelectorAll(".petCard");
+let cards = document.querySelectorAll(".cat-card");
 console.log(cards);
-let petsSection = document.getElementById("pets")
+// let petsSection = document.getElementById("pets")
 let pop = document.createElement("div");
 pop.className = "popWindow";
-pop.style.cssText = `position:absolute;margin-left:auto;margin-right:auto;left:0;right:0;text-align:center; width:100vw;height:100vh; z-index:999999; background-color:black;opacity:0.5;z-index:1;`
+pop.style.cssText = `position:absolute;left:auto;right:auto;top:0;text-align:center; width:100%;height:180%; z-index:999999; background-color:black;opacity:0.5;z-index:1;`
 let modal = document.createElement("div");
 modal.className = "moadl";
-modal.style.cssText = `border:2px solid black;display:flex;justify-content:space-between;flex-diirection:row;position:absolute;margin-left:auto;margin-right:auto;left:0;right:0;text-align:center; width:60%;height:50%; z-index:999999; background-color:white;z-Index:22;`
+modal.style.cssText = `border:2px solid black;display:flex;justify-content:space-between;flex-diirection:row;position:fixed;right:auto;left:20%;top:20%;text-align:center; width:60%;height:40%; z-index:999999; background-color:white;z-Index:22;`
 let imageContainer =document.createElement("img");
 imageContainer.className="popImage";
 imageContainer.style.cssText="width:45%;height:80%;"
@@ -187,9 +327,9 @@ async function popUp(event) {
       element.addEventListener("click", function (e) {
         e.preventDefault();
         document.body.classList.add("stop-scrolling");
-
-        petsSection.appendChild(pop);
-        petsSection.appendChild(modal);
+        document.body.appendChild(modal);
+        document.body.appendChild(pop);
+        
         let i = element.childNodes;
         source = i[3].innerText;
       
@@ -216,7 +356,7 @@ async function popUp(event) {
 popUp();
 
 pop.addEventListener("click",function(){
-  petsSection.removeChild(modal);
-  petsSection.removeChild(pop);
+  document.body.removeChild(modal);
+  document.body.removeChild(pop);
   document.body.classList.remove("stop-scrolling");
 });

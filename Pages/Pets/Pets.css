@@ -162,7 +162,7 @@ font-size: 20px;
 }
 
 .left, .double-left{
-    border:2px solid #CDCDCD;
+    border:2px solid #F1CDB3;
     color: #CDCDCD;
 }
 
@@ -176,7 +176,9 @@ font-size: 20px;
     background-color: none ;
 }
 
-
+.stop-scrolling{
+    overflow: hidden !important;
+}
 
 
 footer{
